@@ -37,7 +37,8 @@ class IssuesController extends Controller
      */
     public function store(Request $request)
     {
-        Issue::create(request()->all());
+        Issue::create(request()->validate(['title'=> 'required','description'=>'required']));
+        
 
         return redirect('/issues');
     }
