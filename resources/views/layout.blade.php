@@ -9,8 +9,10 @@
 </head>
 <body>
     <h1>Внутренний портал СГСН</h1>
+    <div class="columns">
     <div class="column"><a href="/issues">Заявки</a></div>
-    <div class="field"><a href="/issues/create">Создать заявку</a></div>
+    <div class="column"><a href="/posts">Новости службы</a></div>
+    </div>
     @yield('content')
 </body>
 </html>

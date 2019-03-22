@@ -21,3 +21,5 @@ Route::resource('issues','IssuesController');
 Route::post('/issues/{issue}/comments','commentsController@store');
 
 Route::delete('/comments/{comment}','commentsController@delete');
+
+Route::resource('posts','PostsController');
