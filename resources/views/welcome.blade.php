@@ -9,6 +9,9 @@
 </head>
 <body>
     <h1>Внутренний портал СГСН</h1>
+    <div class="columns">
     <div class="column"><a href="/issues">Заявки</a></div>
+    <div class="column"><a href="/posts">Новости Службы</a></div>
+	</div>
 </body>
 </html>
