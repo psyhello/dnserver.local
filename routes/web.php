@@ -1,5 +1,6 @@
 <?php
 
+use App\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +12,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (Post $posts) {
+
+	$posts = Post::all();
+    return view('welcome',compact('posts'));
+      
+     
+
 });
 
 

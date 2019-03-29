@@ -5,14 +5,20 @@
 <h1 class="title">Новости службы</h1>
 <div class="field"><a href="/posts/create">Добавить новость</a></div>
 
-@foreach ( $posts as $post)
+<div class="column">
+        @foreach($posts as $post)
+            
+            <div class="box">
+                    <div class="container">
+                        <div class="notification">
+                            <div class="title">{{$post ->title}}</div>
+                            <div class="subtitle">{{$post ->preview}}</div>
+                            <div class="content">Новость №{{ $post -> id}}, создана в {{$post-> created_at}}</div>
+                        </div>
+                    </div>
+            </div>
+            @endforeach
+    </div>
 
-<div class="box">
-	<div class="column">{{ $post->id }}</div>
-	<div class="column">{{ $post->title }}</div>
-	<div class="column">{{ $post->preview }}</div>
-	<div class="column"><a href="/posts/{{ $post->id}}">>></a></div>
-</div>
-@endforeach
 
 @endsection
