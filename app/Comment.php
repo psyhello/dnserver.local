@@ -12,4 +12,9 @@ class Comment extends Model
     {
     	return $this->belongsTo(Issue::class);
     }
+
+     public function user()
+    {
+    	return $this->belongsTo(User::class)->withDefault(['name' => 'Рукасто-головастый тестер']);
+    }
 }

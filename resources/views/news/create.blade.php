@@ -15,7 +15,7 @@
 		<div class="control">
 			<textarea name="full_text" id="" cols="30" rows="10" class="textarea" placeholder="Введите полную версию новости" ></textarea>
 		</div>
-		<button class="button" type="submit">Создать заявку</button>
+		<button class="button" type="submit">Создать новость</button>
 	</div>
 </form>
 	@if ( $errors->any())

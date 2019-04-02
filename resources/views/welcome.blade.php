@@ -1,9 +1,7 @@
 @extends ('layout')
 
 @section('content')
-<div class="columns">
-    <div class="column">Меню</div>
-    <div class="column">
+
         @foreach($posts as $post)
             
             <div class="box">
@@ -16,10 +14,7 @@
                     </div>
             </div>
             @endforeach
-    </div>
-           
-    <div class="column">Личный кабинет</div>
-    </div>
+   
 
 
 @endsection

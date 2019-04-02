@@ -4,9 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Issue;
 use Illuminate\Http\Request;
+use App\User;
 
 class IssuesController extends Controller
 {
+
+    /** 
+    * Checking authentication.
+    *
+    * 
+    */
+    public function __construct()
+    {
+        $this -> middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -37,7 +48,10 @@ class IssuesController extends Controller
      */
     public function store(Request $request)
     {
-        Issue::create(request()->validate(['title'=> 'required','description'=>'required']));
+
+        $attr = request()->validate(['title'=> 'required','description'=>'required']);
+
+        Issue::create($attr + ['user_id'=>auth()->id()]);
         
 
         return redirect('/issues');
@@ -51,7 +65,8 @@ class IssuesController extends Controller
      */
     public function show(Issue $issue)
     {
-        return view ('issues.show', compact('issue'));
+        
+        return view ('issues.show', compact('issue','user'));
     }
 
     /**
