@@ -17,7 +17,11 @@ class CreateIssuesTable extends Migration
             $table->bigIncrements('id');
             $table->text('title');
             $table->text('description');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

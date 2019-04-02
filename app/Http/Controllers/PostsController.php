@@ -14,7 +14,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::all()->SortByDesc('created_at');
         return view ('news.index', compact('posts'));
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Issue;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Issue $issues)
     {
-        return view('home');
+        $issues = Issue::where('user_id', auth()->id())->get();
+
+
+        return view('home',compact('issues'));
     }
 }

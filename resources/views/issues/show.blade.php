@@ -7,6 +7,7 @@
 		<div class="column">Заявка №{{ $issue -> id}}, создана в {{$issue-> created_at}}</div>
 		<div class="column">{{$issue ->title}}</div>
 		<div class="column">{{$issue ->description}}</div>
+		<div class="column">{{$issue ->user->name}}</div>
 	</div>
 </div> 
 @if($issue->comments->count())
