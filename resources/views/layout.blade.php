@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
-    <h1>Внутренний портал СГСН</h1>
+    <a href="/"><h1>Внутренний портал СГСН</h1></a>
     <div class="columns">
         <div class="column"><a href="/issues">Заявки</a></div>
         <div class="column"><a href="/posts">Новости службы</a></div>
