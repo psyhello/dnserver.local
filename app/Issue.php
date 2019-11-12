@@ -16,7 +16,7 @@ class Issue extends Model
 
     public function Comments()
     {
-    	return $this->hasMany(Comment::class)->withDefault(['name' => 'Рукасто-головастый тестер']);
+    	return $this->hasMany(Comment::class);
     }
 
 }

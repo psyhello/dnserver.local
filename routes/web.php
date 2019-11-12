@@ -14,7 +14,7 @@ use App\Post;
 
 Route::get('/', function (Post $posts) {
 
-	$posts = Post::all();
+	$posts = Post::all()->SortByDesc('created_at');
     return view('welcome',compact('posts'));
       
      
@@ -29,6 +29,7 @@ Route::post('/issues/{issue}/comments','commentsController@store');
 Route::delete('/comments/{comment}','commentsController@delete');
 
 Route::resource('posts','PostsController');
+Route::resource('depts','DeptController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

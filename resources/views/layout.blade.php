@@ -19,7 +19,7 @@
     <div class="columns">
         <div class="box"><span>Меню</span>
             <li class="nav">
-                <a href="/issues/create">Подать заявку</a>
+                <div class="menuitem"><a href="/issues/create">Подать заявку</a></div>
             </li> 
         </div>
         <div class="column">@yield('content')</div>

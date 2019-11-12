@@ -17,6 +17,9 @@ class CreateIssuesTable extends Migration
             $table->bigIncrements('id');
             $table->text('title');
             $table->text('description');
+            $table->unsignedBigInteger('dept_id')->nullable();
+            $table->unsignedBigInteger('duty_id')->nullable();
+            $table->unsignedBigInteger('company_id')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
