@@ -30,6 +30,7 @@ Route::delete('/comments/{comment}','commentsController@delete');
 
 Route::resource('posts','PostsController');
 Route::resource('depts','DeptController');
+Route::resource('companies','CompanyController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
